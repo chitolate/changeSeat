@@ -1,3 +1,35 @@
+body{
+    background-color: #b0c4de;
+}
+
+.teacher_desk{
+    text-align: center;
+    margin:20px; 
+    background-color: white;
+}
+.desk{
+    background-color: white;
+}
+.classroom{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bun{
+    text-align: center;
+    font-size: 30px;
+    margin: 100px;
+}
+input{
+    font-size: 20px;
+}
+button{
+    font-size: 20px;
+}
+span{
+    font-size: 20px;
+}
 
 .mae_num{
     width: 9%;
@@ -19,6 +51,11 @@
     border: solid 1px black;
     padding: 20px;
 }
+.desk_btn{
+    width: 20px;
+    height: 20px;
+}
+
 .item_none{
     display: none;
 }
