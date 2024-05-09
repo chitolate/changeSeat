@@ -278,6 +278,7 @@ function changeSeat() {
     first_frag = false;
     let oneMoreBtn = document.createElement("div");
     oneMoreBtn.textContent = "シャッフル";
+    oneMoreBtn.classList.add("shaffle");
     oneMoreBtn.setAttribute('onclick', 'oneMore()');
     change_seat.appendChild(oneMoreBtn);
 }
