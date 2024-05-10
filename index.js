@@ -29,6 +29,17 @@ function send_student_sum() {
     // ステップ１　ー＞　ステップ２
     student_sum.classList.add("item_none");
     desk_sum.classList.remove("item_none");
+
+    let new_root = document.createElement("div");1
+    new_root.classList.add("first_step","bread");
+    bread_menu.appendChild(new_root);
+    let first_step = document.createElement("div");
+    first_step.textContent = "人数";
+    new_root.appendChild(first_step);
+    let people_num = document.createElement("div");
+    people_num.textContent = student + "人";
+    new_root.appendChild(people_num);
+
 }
 function send_desk_sum() {
     const tate_num = document.getElementById("tate_num");
@@ -40,6 +51,16 @@ function send_desk_sum() {
         // ステップ２　ー＞　ステップ３
         desk_sum.classList.add("item_none");
         desk_place.classList.remove("item_none");
+
+        let new_root = document.createElement("div");
+        new_root.classList.add("second_step","bread");
+        bread_menu.appendChild(new_root);
+        let second_step = document.createElement("div");
+        second_step.textContent = "座席の列数";
+        new_root.appendChild(second_step);
+        let seat_num = document.createElement("div");
+        seat_num.textContent = "縦" +  desk_tate + "列　横"　+ desk_yoko + "列";
+        new_root.appendChild(seat_num);
         error_msg.textContent = "";
         choose_desk();
     }

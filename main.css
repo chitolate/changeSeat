@@ -1,7 +1,12 @@
 body{
     background-color: #b0c4de;
 }
-
+.bread_menu{
+    display: flex;
+}
+.bread{
+    margin: 5px;
+}
 .teacher_desk{
     text-align: center;
     margin:20px; 
