@@ -1,3 +1,5 @@
+const bread_menu = document.getElementById("bread_menu");   //ぱんくずリスト用
+const error_msg = document.getElementById("error_msg");     //エラーメッセージ用
 const student_sum = document.getElementById("student_sum");
 const desk_sum = document.getElementById("desk_sum");
 const desk_place = document.getElementById("desk_place");
@@ -16,6 +18,13 @@ let desk_tate,desk_yoko;
 function send_student_sum() {
     const student_num = document.getElementById("student_num");
     student = student_num.value;
+    if (student <= 0) {
+        error_msg.textContent = "人数は１以上です．";
+        return 0;
+    }
+    else{
+        error_msg.textContent = "";
+    }
     // console.log(student_num.value);
     // ステップ１　ー＞　ステップ２
     student_sum.classList.add("item_none");
@@ -31,9 +40,11 @@ function send_desk_sum() {
         // ステップ２　ー＞　ステップ３
         desk_sum.classList.add("item_none");
         desk_place.classList.remove("item_none");
+        error_msg.textContent = "";
         choose_desk();
     }
     else{
+        error_msg.textContent = "席の数が足りません";
         console.log("席の数が足りません");
     }
 }
@@ -86,9 +97,11 @@ function decision_desk() {
         motivate_num.classList.remove("item_none");
         go_motivate_num();
         get_desk_date(notUse_desk,false);
+        error_msg.textContent = "";
      }
      else{
-         console.log("席と学生の数があっていません");
+        error_msg.textContent = "席と学生の数があっていません";
+        console.log("席と学生の数があっていません");
      }
 }
 function go_motivate_num() {
@@ -197,6 +210,7 @@ function pushFrontDesk(btn) {
 }
 function decision_mae_def() {
     if (mae_choose_sum != mae_people.length) {
+        error_msg.textContent = "前に行きたい人と前の席の数があっていません";
         console.log("前に行きたい人と前の席の数があっていません");
     }
     else{
@@ -209,6 +223,7 @@ function decision_mae_def() {
     }
 }
 function changeSeat() {
+    error_msg.textContent = "";
     console.log("changeSeat");
     //　ついに席替え！
     // j = Math.floor(Math.random() * 47) + 1;

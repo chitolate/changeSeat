@@ -71,7 +71,11 @@ span{
     padding: 3px;
     border-radius: 99999px;
 }
-
+@media screen and (max-width: 600px) {
+    body{
+        overflow-x: hidden;
+    }
+}
 .item_none{
     display: none;
 }
