@@ -1,7 +1,12 @@
 body{
     background-color: #b0c4de;
 }
-
+.bread_menu{
+    display: flex;
+}
+.bread{
+    margin: 5px;
+}
 .teacher_desk{
     text-align: center;
     margin:20px; 
@@ -71,7 +76,11 @@ span{
     padding: 3px;
     border-radius: 99999px;
 }
-
+@media screen and (max-width: 600px) {
+    body{
+        overflow-x: hidden;
+    }
+}
 .item_none{
     display: none;
 }
